@@ -11,13 +11,22 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/rank',
+    name: 'rank',
+    //路由懒加载
+    component: () => import(/* webpackChunkName: "rank" */ '../views/Rank.vue')
+  },
+  {
+    path: '/singers',
+    name: 'singers',
+    component: () => import(/* webpackChunkName: "singers" */ '../views/Singers.vue')
+  },
+  {
+    path: '/songs',
+    name: 'songs',
+    component: () => import(/* webpackChunkName: "songs" */ '../views/Songs.vue')
+  },
+
 ]
 
 const router = new VueRouter({
@@ -25,3 +34,5 @@ const router = new VueRouter({
 })
 
 export default router
+  
+ 

@@ -1,30 +1,33 @@
 <template>
   <div class="home">
-        <el-container>
-            <el-aside><left-nav/></el-aside>
-             <el-container>
-                    <el-header><top-nav/></el-header>
-                    <el-main>
-                      
-                    </el-main>    
-            </el-container>   
-        </el-container>
-        <el-footer></el-footer>
+      <div class="carouselWrap">
+           <el-carousel trigger="click" height="150px" class="hide">
+              <el-carousel-item v-for="item in 4" :key="item">
+              <h3 class="small">{{ item }}</h3>
+              </el-carousel-item>
+           </el-carousel>
+      </div>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import leftNav  from '@/components/leftNav.vue'
-import topNav   from '@/components/topNav.vue'  
+<script> 
 export default {
   name: 'Home',
   components: {
-    leftNav,
-    topNav
+  
   }
 }
 </script>
 <style scoped>
-
+ .home{
+    display: flex;
+    justify-content: center;
+ }
+ .carouselWrap{
+   width: 500px;
+ }
+ .hide{
+   overflow: hidden;
+   text-align: center;
+ }
 </style>
