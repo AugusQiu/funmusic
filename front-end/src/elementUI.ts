@@ -1,8 +1,8 @@
 //按需引入element-ui
 import { 
-     Container, Header,Main,Footer,Aside,Col,
+     Container, Header,Main,Footer,Aside,Row,Col,
      Avatar,Menu, MenuItem,MenuItemGroup,Carousel,CarouselItem,
-     Button
+     Button,Card
   } from 'element-ui'
 
 const elementUI = {
@@ -20,6 +20,8 @@ const elementUI = {
     Vue.use(Carousel)
     Vue.use(CarouselItem)
     Vue.use(Button)
+    Vue.use(Card)
+    Vue.use(Row)
   }
 }
 
